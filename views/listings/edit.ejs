@@ -15,12 +15,19 @@
                     <label for="description" class="form-label">Description </label>
                     <textarea name="listing[description]" class="form-control"><%= listing.description %></textarea>
                 </div>
-
+               <!-- Old image preview Box  start here --> 
+                <div class="mb-3">
+                    <b>Original Listing Image</b>
+                    <div class="col-12 col-md-6">
+                   <img src="<%= listing.image.url %>" style="height: 15em; border-radius: 1em;" alt="">
+                    </div>
+                </div>
+                <!-- Old image preview Box  End here -->    
                 <div class="mb-3">
                     <label for="image" class="form-label">Image Link </label>
                     <!-- <input name="listing[image][url]" value=" " type="text" class="form-control"> -->
                    
-                    <input name="listing[image]" type="text" class="form-control" value="<%= listing.image %>">
+                    <input name="listing[image]" type="text" class="form-control" value="<%= listing.image %>" placeholder="Enter Image Url" >
 
                 </div>
                 <div class="row">

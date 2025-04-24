@@ -94,10 +94,11 @@ object-fit: cover !important;
 
 /* Show page  */
 .show-img{
-    height: 30vh;
+    height: 30vh !important;
 }
 .btns{
     display: flex;
+    margin:1em 0;
 }
 .show-card{
     padding-left: 0;
