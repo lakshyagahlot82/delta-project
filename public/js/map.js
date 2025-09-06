@@ -1,8 +1,8 @@
-mapboxgl.accessToken = mapToken;
+mapboxgl.accessToken = window.mapToken;
 
 // Check if coordinates exist
-const coordinates = listing.geometry && listing.geometry.coordinates 
-    ? listing.geometry.coordinates 
+const coordinates = window.listing && window.listing.geometry && window.listing.geometry.coordinates 
+    ? window.listing.geometry.coordinates 
     : [77.2090, 28.6139]; // fallback: Delhi coordinates
 
 const map = new mapboxgl.Map({
@@ -20,7 +20,7 @@ const marker = new mapboxgl.Marker({ color: 'red' })
     .setLngLat(coordinates)
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
-            .setHTML(`<h3>${listing.title}</h3><p>Exact location will be provided after booking.</p>`)
+            .setHTML(`<h3>${window.listing?.title || ''}</h3><p>Exact location will be provided after booking.</p>`)
     )
     .addTo(map);
 
