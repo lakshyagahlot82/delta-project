@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
 const wrapAsync = require("../utils/wrapAsync.js");
-const ExpressError = require("../utils/expressError.js"); // small 'e' for consistency
+const ExpressError = require("../utils/ExpressError.js"); // small 'e' for consistency
 const Review = require("../models/review.js");
 const Listing = require("../models/listing.js");
 const { validateReview, isReviewAuthor, isLoggedIn } = require("../middleware.js");

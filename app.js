@@ -9,7 +9,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 
-const ExpressError = require("./utils/expressError.");
+const ExpressError = require("./utils/ExpressError.js");
 
 
 
